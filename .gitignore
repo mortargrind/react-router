@@ -8,5 +8,7 @@ lerna-debug.log
 /packages/*/umd/
 /website/build/
 
+/monorepo-deploy-key
+/monorepo-deploy-key.pub
 /website-deploy-key
 /website-deploy-key.pub

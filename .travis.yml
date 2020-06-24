@@ -40,11 +40,11 @@ jobs:
     before_script: yarn build
     script: echo "Deploying website to https://reacttraining.com$PUBLIC_PATH"
     before_deploy:
-    - openssl aes-256-cbc -K $encrypted_70c5e56b421c_key -iv $encrypted_70c5e56b421c_iv
-      -in website-deploy-key.enc -out website-deploy-key -d
-    - chmod 600 website-deploy-key
+    - openssl aes-256-cbc -K $encrypted_fbe3a224532e_key -iv $encrypted_fbe3a224532e_iv
+      -in monorepo-deploy-key.enc -out monorepo-deploy-key -d
+    - chmod 600 monorepo-deploy-key
     - eval $(ssh-agent -s)
-    - ssh-add website-deploy-key
+    - ssh-add monorepo-deploy-key
     deploy:
       provider: script
       script: bash scripts/deploy-website-new.sh
