@@ -35,7 +35,7 @@ jobs:
       on:
         tags: true
   - stage: Deploy Website
-    if: branch = website
+    if: branch = website-new
     env: PUBLIC_PATH=/react-router/
     before_script: yarn build
     script: echo "Deploying website to https://reacttraining.com$PUBLIC_PATH"
@@ -47,7 +47,7 @@ jobs:
     - ssh-add website-deploy-key
     deploy:
       provider: script
-      script: bash scripts/deploy-website.sh
+      script: bash scripts/deploy-website-new.sh
       skip_cleanup: true
       on:
-        branch: website
+        branch: website-new
