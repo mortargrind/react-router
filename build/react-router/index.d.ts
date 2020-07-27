@@ -311,5 +311,5 @@ export interface PathMatch {
  *
  * @see https://reactrouter.com/api/resolvePath
  */
-export declare function resolvePath(to: To, fromPathname?: string): Path;
+export declare function resolvePath(to: To, fromPathname?: string, basename?: string): Path;
 export {};
